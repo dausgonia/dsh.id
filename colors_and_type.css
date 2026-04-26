@@ -1,0 +1,261 @@
+/* ============================================================
+   DSH Design System — Colors & Type
+   ============================================================
+   Grid-based, modular, human-centered.
+   Core palette: black & white. Structure > ornament.
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Modern Gothic Mono";
+  src: url("fonts/ModernGothicMono-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Modern Gothic Mono";
+  src: url("fonts/ModernGothicMono-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Modern Gothic Mono";
+  src: url("fonts/ModernGothicMono-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Modern Gothic Mono";
+  src: url("fonts/ModernGothicMono-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Visual";
+  src: url("fonts/Visual-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Visual";
+  src: url("fonts/Visual-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* -------- Core colors -------- */
+  --dsh-black: #000000;
+  --dsh-white: #FFFFFF;
+
+  /* -------- Neutrals (rule-driven greys, used sparingly) -------- */
+  --dsh-ink-900: #0A0A0A;   /* near-black for UI surfaces */
+  --dsh-ink-700: #2B2B2B;   /* subdued text on white */
+  --dsh-ink-500: #6B6B6B;   /* meta, captions */
+  --dsh-ink-300: #B8B8B8;   /* disabled, hairline */
+  --dsh-ink-200: #DCDCDC;   /* borders */
+  --dsh-ink-100: #EFEFEF;   /* surface-alt */
+  --dsh-ink-050: #F7F7F7;   /* surface background */
+
+  /* -------- Semantic surfaces -------- */
+  --bg:           var(--dsh-white);
+  --bg-alt:       var(--dsh-ink-050);
+  --bg-inverse:   var(--dsh-black);
+  --surface:      var(--dsh-white);
+  --surface-alt:  var(--dsh-ink-100);
+
+  /* -------- Foreground -------- */
+  --fg1:          var(--dsh-black);      /* primary text */
+  --fg2:          var(--dsh-ink-700);    /* secondary text */
+  --fg3:          var(--dsh-ink-500);    /* meta */
+  --fg-disabled:  var(--dsh-ink-300);
+  --fg-inverse:   var(--dsh-white);
+
+  /* -------- Lines / borders -------- */
+  --line:         var(--dsh-black);      /* strong structural rule */
+  --line-soft:    var(--dsh-ink-200);    /* hairline */
+  --line-inverse: var(--dsh-white);
+
+  /* -------- Accent (used only when collaboration demands) -------- */
+  --accent:       var(--dsh-black);      /* default: no chroma */
+
+  /* -------- Type families -------- */
+  --font-mono:    "Modern Gothic Mono", "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Visual", "Modern Gothic Mono", ui-monospace, monospace;
+  --font-body:    "Modern Gothic Mono", "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  /* -------- Weights -------- */
+  --w-thin:   100;
+  --w-light:  300;
+  --w-reg:    400;
+
+  /* -------- Type scale (modular, 4pt baseline) -------- */
+  --fs-xs:    11px;    /* micro/meta */
+  --fs-sm:    13px;    /* caption */
+  --fs-base:  15px;    /* body */
+  --fs-md:    17px;    /* lead */
+  --fs-lg:    22px;    /* h4 */
+  --fs-xl:    30px;    /* h3 */
+  --fs-2xl:   44px;    /* h2 */
+  --fs-3xl:   64px;    /* h1 */
+  --fs-display: 104px; /* headline / hero */
+
+  /* -------- Line heights -------- */
+  --lh-tight:  1.05;
+  --lh-snug:   1.2;
+  --lh-normal: 1.45;
+  --lh-loose:  1.7;
+
+  /* -------- Tracking (mono is already wide; headlines go tighter) -------- */
+  --track-tight: -0.02em;
+  --track-normal: 0em;
+  --track-wide:  0.08em;
+  --track-wider: 0.16em;    /* labels, all-caps */
+
+  /* -------- Spacing (4pt grid) -------- */
+  --sp-0:  0px;
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* -------- Radii (minimal — grid thinking favors sharp corners) -------- */
+  --r-0:  0px;
+  --r-1:  2px;
+  --r-2:  4px;
+  --r-pill: 999px;
+
+  /* -------- Borders -------- */
+  --bw-1: 1px;
+  --bw-2: 2px;
+  --bw-3: 3px;
+
+  /* -------- Elevation — avoid; use rules instead. Defined for rare UI surface needs. -------- */
+  --shadow-0: none;
+  --shadow-1: 0 1px 0 var(--dsh-ink-200);
+  --shadow-2: 0 2px 0 var(--dsh-black);   /* hard stacked shadow, no blur */
+
+  /* -------- Motion -------- */
+  --ease-linear: linear;
+  --ease-out:    cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-1: 80ms;
+  --dur-2: 160ms;
+  --dur-3: 240ms;
+  --dur-4: 400ms;
+
+  /* -------- Layout grid -------- */
+  --grid-col: 12;
+  --grid-gutter: 24px;
+  --grid-margin: 32px;
+  --content-max: 1280px;
+}
+
+/* ==================== Semantic element styles ==================== */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg1);
+  font-family: var(--font-body);
+  font-weight: var(--w-light);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.dsh-display {
+  font-family: var(--font-display);
+  font-weight: var(--w-light);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--track-tight);
+}
+
+h1, .dsh-h1 {
+  font-family: var(--font-mono);
+  font-weight: var(--w-thin);
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--track-tight);
+  margin: 0;
+}
+h2, .dsh-h2 {
+  font-family: var(--font-mono);
+  font-weight: var(--w-light);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--track-tight);
+  margin: 0;
+}
+h3, .dsh-h3 {
+  font-family: var(--font-mono);
+  font-weight: var(--w-light);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+h4, .dsh-h4 {
+  font-family: var(--font-mono);
+  font-weight: var(--w-light);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+.dsh-accent {                            /* Visual serif for accents only */
+  font-family: var(--font-display);
+  font-weight: var(--w-light);
+  font-style: italic;
+}
+
+p, .dsh-body {
+  font-family: var(--font-body);
+  font-weight: var(--w-light);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  margin: 0;
+}
+.dsh-lead {
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+}
+.dsh-caption {
+  font-size: var(--fs-sm);
+  color: var(--fg3);
+  letter-spacing: var(--track-wide);
+}
+.dsh-meta, .dsh-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--w-light);
+  text-transform: uppercase;
+  letter-spacing: var(--track-wider);
+  color: var(--fg2);
+}
+
+code, pre, .dsh-code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: var(--w-light);
+}
+
+hr, .dsh-rule {
+  border: 0;
+  border-top: var(--bw-1) solid var(--line);
+  margin: 0;
+}
+
+::selection { background: var(--dsh-black); color: var(--dsh-white); }
