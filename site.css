@@ -34,7 +34,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   border-bottom: 1px solid #000;
 }
 .nav .mark { display: flex; align-items: center; gap: 10px; }
-.nav .mark img { height: 14px; width: auto !important; }
+.nav .mark img { height: 11px; width: auto !important; }
 .nav .mark .sub { font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: #6b6b6b; }
 .nav .links { display: none; }
 .nav .burger {
@@ -50,7 +50,7 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 
 @media (min-width: 900px) {
   .nav { padding: 18px 40px; }
-  .nav .mark img { height: 18px; width: auto !important; }
+  .nav .mark img { height: 14px; width: auto !important; }
   .nav .mark .sub { font-size: 10px; }
   .nav .links { display: flex; gap: 28px; }
   .nav .links a {
